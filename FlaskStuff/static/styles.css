@@ -1,0 +1,218 @@
+#header{
+    background-color: transparent;
+    position: relative;
+    margin: 0px auto auto auto;
+    max-width: 1300px;
+}
+
+.quizHolder{
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 3rem auto 0 auto;
+    max-width: 1300px;
+}
+
+.quizBox{
+    position: relative;
+    margin: 5px;
+    min-width: none;
+    max-height: 310px;
+    flex: 10 1 19%;
+    overflow: hidden;
+}
+
+.quizBox img{
+    width: 100%;
+    max-height: 185.3px;
+    height: auto;
+    overflow: hidden;
+}
+
+.quizTitle{
+    position: relative;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 3px;
+    font-size: 1.3rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 700;
+}
+
+a:link{
+    text-decoration: none;
+    color: #6caee6;
+}
+
+a:visited{
+    text-decoration: none;
+    color: #6caee6;
+}
+
+a:hover{
+    color: #5A90BD;
+}
+
+.pageInput{
+    width: 25px;
+    text-align: center;
+    margin-right: -5px;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 2px 0px 0px 2px;
+    outline: none;
+}
+
+.nav{
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.navButton{
+    display: flex;
+    background-color: white;
+    width: 6rem;
+    height: 2rem;
+    border-radius: 1rem;
+}
+
+.navButton:active{
+    background-color: #cfcfcf;
+}
+
+.navButton span{
+    color: black;
+}
+
+a span{
+    text-align: center;
+    margin: auto;
+}
+
+.jump{
+    display: flex;
+    padding: 0px 10px 0px 10px;
+    margin: 0px 5px 0px 5px;
+    background-color: white;
+    border-radius: .2rem;
+}
+
+.jump span{
+    margin: auto;
+}
+
+#pageWordBox{
+    padding-right: .3rem;
+}
+
+.takerNum{
+    background: white;
+    position: relative;
+    margin-top: -22.3px;
+    color: black;
+    padding-left: .3rem;
+}
+
+#order{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.topnav{
+    position: relative;
+    max-width: 1300px;
+    margin: 0 auto 0 auto;
+}
+
+input[type=submit]{
+    background-color: #cfcfcf;
+    color: black;
+    border-style: solid;
+    border-color: black;
+    border-radius: 0px 2px 2px 0px;
+    border-width: 1px;
+}
+
+input[type=submit]:active{
+    background-color: #333333;
+}
+
+.neverAgain{
+    position: absolute;
+    right: 0;
+    background-color: black;
+    color: white;
+    border-style: solid;
+}
+
+.neverAgain:active{
+    background-color: #444444;
+}
+
+.quizHidden{
+    float: right;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+#overlay{
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+.overlayList{
+    position: fixed;
+    display: none;
+    width: 25%;
+    height: 70%;
+    background-color: #333333;
+    z-index: 3;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    top: 45%;
+    overflow: auto;
+    border-radius: 5px;
+}
+
+.menuItem{
+    background-color: #1c1b22;
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+}
+
+#itemTitle{
+    text-overflow: ellipsis; /* This ellipsis and wordwrap stuff doesnt work, suppose to make rest of title ellipsis */
+    overflow: hidden;
+    word-wrap: break-word;
+    line-height: 1.15em;
+    max-height: 2.3em;
+    padding-bottom: 2px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #6caee6;
+}
+
+#itemTitle:hover{
+    color: #5A90BD;
+}
+
+#unhideButton{
+    margin-left: auto;
+}

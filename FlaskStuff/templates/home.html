@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<!-- sorting order (asc, desc, random), change number of quizzes per page -->
+
+<html>
+    <head>
+        <title>Quiz Thing</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="{{ url_for('static', filename='scripts.js') }}" type="text/javascript" defer></script>
+    </head>
+
+    <body bgcolor="#1c1b22">
+
+        <!-- rectangle at the top -->
+        <div id="header" style="color: #bcbdbc; text-align: center;"><h1>Quiz Thing</h1></div>
+
+
+        <!-- something for buttons and page numbers here -->
+        <div class="topnav">
+        <form class="nav" action="/jump" method="POST">
+            <a class="navButton" href="/previous"><span>Previous</span></a>
+            <span class="jump">
+                <span id="pageWordBox">page</span>
+                <span>
+                    <input class="pageInput" type="text" name="page" placeholder="{{pageNumber}}">
+                    <input type="submit" value="go">
+                    <span> of {{maxPages}} </span>
+                </span>
+            </span>
+            <a class="navButton" href="/next"><span>Next</span></a>
+        </form>
+        <div class="customizers">
+        <select name="orderBy" id="order" onchange="report(this.value)">
+            <option value="ascending" {% if orderAscending %} selected="selected" {% endif %}> Takers: Low to High</option>
+            <option value="descending" {% if orderDescending %} selected="selected" {% endif %}>Takers: High to Low</option>
+            <option value="random" {% if orderRandom %} selected="selected" {% endif %}>    Takers: Random</option>
+        </select>
+        </div>
+        </div>
+
+        <!-- this thing holds all the quizzes -->
+        <div class="quizHolder">
+
+            {% for quizData in dataList %}
+            <div class = "quizBox" id="{{quizData[0]}}">
+            <button class="neverAgain" type="button" onclick="sendQuizID('{{quizData[0]}}')">Don't Show Again</button>
+            <a href={{"https://uquiz.com/"+quizData[0]}} target="_blank">
+                <div class="quizImage">
+                
+
+                {% if quizData[3] != None %}
+                <img src={{"https://img.uquiz.com/content/images/quiz_thumbnails/halfandhalf/"+quizData[0]+"/"+quizData[3]}}>
+                {% elif quizData[4] != None%}
+                <img src={{"https://img.uquiz.com/content/images/quiz/"+quizData[4]}}>
+                {% else %}
+                <img src="{{url_for('static', filename='default_image.png')}}">
+                {% endif %}
+
+                <div class="takerNum">Takers: {{quizData[5]}}</div>
+                </div>
+
+                <div class = "quizTitle"> {{quizData[1]}}</div>
+            </a>
+            </div>
+            {% endfor %}
+
+        </div>
+
+        <br>
+        <br>
+
+        <form class="nav" action="/jump" method="POST" autocomplete="off">
+            <a class="navButton" href="/previous"><span>Previous</span></a>
+            <span class="jump">
+                <span id="pageWordBox">page</span>
+                <span>
+                    <input class="pageInput" type="text" name="page" placeholder="{{pageNumber}}">
+                    <input type="submit" value="go">
+                    <span> of {{maxPages}} </span>
+                </span>
+            </span>
+            <a class="navButton" href="/next"><span>Next</span></a>
+        </form>
+    
+        <button class="quizHidden" id="quizHidden" onclick="showHiddenQuizList()">Hidden Quizzes</button>
+        
+        <div class="overlayList" id="hiddenQuizList">
+            {% for url in hiddenQuizzes %}
+            <div class="menuItem" id="{{url}}">
+                <a id="itemTitle" href={{"https://uquiz.com/"+url}} target="_blank">{{quizDict[url]}}</a>
+                <button id="unhideButton" onclick="unhideQuiz('{{url}}')">Unhide</button>
+            </div>
+
+            {% endfor %}
+        </div>
+        <div id="overlay" onclick="hideOverlay()"></div>
+
+        <!-- then other button - lfoat right, with padding right -->
+    </body>
+</html>
