@@ -10,8 +10,7 @@ However, new quizzes are displayed in the "random" tab every 5 minutes. This pro
 Additional packages that need to be installed for quizGet.py and the Flask application. Alternatively, one can browse quizzes by using an online SQLite database viewer.
 
 # quizGet.py
-**NO LONGER WORKS**
- Possibly due to some cloudfare protection. There may be a way to bypass this using cloudscraper, don't know if I'll try to implement that though.
+**NO LONGER WORKS** possibly due to some cloudfare protection. There may be a way to bypass this using cloudscraper, don't know if I'll try to implement that though.
 
 quizGet.py sends a GET request to the uQuiz server for the random quizzes every 5 minutes, adding quizzes to the Quizzes.db database (quizzes already contained in the database are ignored).
 
