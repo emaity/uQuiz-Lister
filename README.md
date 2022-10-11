@@ -1,5 +1,5 @@
 # uQuiz-Lister
-Provides an interface to access uQuiz quizzes.
+Provides an interface with which to access uQuiz quizzes.
 
 # Why?
 uQuiz doesn't display more quizzes on additional pages, for some reason.
