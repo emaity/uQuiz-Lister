@@ -11,7 +11,7 @@ Additional packages that need to be installed for quizGet.py and the Flask appli
 
 # quizGet.py
 **NO LONGER WORKS**
-^ Possibly due to some cloudfare protection. There may be a way to bypass this using cloudscraper, don't know if I'll try to implement that though.
+ Possibly due to some cloudfare protection. There may be a way to bypass this using cloudscraper, don't know if I'll try to implement that though.
 
 quizGet.py sends a GET request to the uQuiz server for the random quizzes every 5 minutes, adding quizzes to the Quizzes.db database (quizzes already contained in the database are ignored).
 
