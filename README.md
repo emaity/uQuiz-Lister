@@ -7,7 +7,7 @@ uQuiz doesn't display more quizzes on additional pages, for some reason.
 However, new quizzes are displayed in the "random" tab every 5 minutes. This project takes those new quizzes and stores their information into a database, allowing for multiple pages of quizzes without having to use uQuiz directly.
 
 # requirements.txt
-Additional packages that need to be installed for quizGet.py and the Flask application. Alternatively, one can browse quizzes by using an online SQLite database viewer.
+Additional packages that need to be installed for quizGet.py and the Flask application. Alternatively, one can browse quizzes by passing Quizzes.db into an online SQLite database viewer.
 
 # quizGet.py
 **NO LONGER WORKS** possibly due to some cloudfare protection. There may be a way to bypass this using cloudscraper, don't know if I'll try to implement that though.
