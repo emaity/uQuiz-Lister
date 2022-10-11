@@ -6,6 +6,13 @@ uQuiz doesn't display more quizzes on additional pages, for some reason.
 
 However, new quizzes are displayed in the "random" tab every 5 minutes. This project takes those new quizzes and stores their information into a database, allowing for multiple pages of quizzes without having to use uQuiz directly.
 
+# Features
+Pages! Yay!
+
+Sorting by number of takers of a quiz, either by highest to lowest, lowest to highest, or in a random order. changed with the drop down menu at the top right.
+
+Hiding quizzes from the interface by pressing the "Don't Show Again" button overlaid on quiz entries. Quizzes can be unhidden in the menu opened using the "Hidden Quizzes" button at the bottom right. Hidden quizzes are handled with a cookie saved in the user's browser.
+
 # requirements.txt
 Additional packages that need to be installed for quizGet.py and the Flask application. Alternatively, one can browse quizzes by passing Quizzes.db into an online SQLite database viewer.
 
