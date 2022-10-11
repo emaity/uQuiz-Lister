@@ -9,7 +9,7 @@ However, new quizzes are displayed in the "random" tab every 5 minutes. This pro
 # Features
 Pages! Yay!
 
-Sorting by number of takers of a quiz, either by highest to lowest, lowest to highest, or in a random order. Changed with the drop down menu at the top right.
+Sorting by number of takers of a quiz, either by highest to lowest, lowest to highest, or in a random order. Sort order is changed with the drop down menu at the top right.
 
 Hiding quizzes from the interface by pressing the "Don't Show Again" button overlaid on quiz entries. Quizzes can be unhidden in the menu opened using the "Hidden Quizzes" button at the bottom right. Hidden quizzes are handled with a cookie saved in the user's browser.
 
